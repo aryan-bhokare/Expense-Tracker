@@ -4,7 +4,6 @@ import { ArrowUturnLeftIcon, HomeIcon } from '@heroicons/react/24/solid'
 
 const Error = () => {
   const error = useRouteError();
-  console.log(error);
   const navigate = useNavigate();
 
 
@@ -17,14 +16,14 @@ const Error = () => {
           <span>Go Back</span>
           <ArrowUturnLeftIcon width={20} />
         </button>
-        <Link to='/'>
-        <button className='btn btn--dark'>
-          <span>Go Home</span>
-          <HomeIcon width={20}/>
-        </button>
+        <Link
+          to="/"
+          className="btn btn--dark"
+        >
+          <HomeIcon width={20} />
+          <span>Go home</span>
         </Link>
       </div>
-
     </div>
   )
 }
